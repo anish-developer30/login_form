@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d0ee3;
+        }
+
+        .container {
+            position: relative;
+            max-width: 350px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .container .forms {
+            display: flex;
+            align-items: center;
+            width: 200%;
+            height: 359px;
+        }
+
+        .container .form {
+            width: 50%;
+            background-color: #fff;
+        }
+
+        .container .form {
+            padding: 25px;
+        }
+
+        .container .form .title {
+            position: relative;
+            font-size: 23px;
+            font-weight: 600;
+        }
+
+        .form .title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background-color: #0d0ee3;
+            border-radius: 30px;
+        }
+
+        .form .input_field {
+            position: relative;
+            margin-top: 30px;
+            height: 35px;
+            width: 100%;
+        }
+
+        .input_field input {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            font-size: 16px;
+            padding: 0 35px;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #ccc;
+            border-top: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .input_field input:is(:focus, :valid) {
+            border-bottom-color: #0d0ee3;
+        }
+
+        .input_field i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 18px;
+        }
+
+        .input_field input:is(:focus, :valid)~i {
+            color: #0d0ee3;
+        }
+
+        .input_field i.icon {
+            left: 0;
+        }
+
+        .input_field i.i {
+            right: 0;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .form .checkbox_text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .checkbox_text .checkbox_content {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox_text label,
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .checkbox_text a:hover {
+            text-decoration: underline;
+            color: #0d0ee3;
+        }
+
+        .checkbox_content input {
+            accent-color: #0d0ee3;
+            margin: 0 8px -2px 4px;
+        }
+
+        .form .btn {
+            background-color: #0d0ee3;
+            color: #fff;
+            letter-spacing: 2px;
+            font-size: 17px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form .btn:hover {
+            background-color: #2b16f1;
+        }
+
+        .signup {
+            margin-top: 10px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .signup span a:hover {
+            text-decoration: underline;
+            color: #0d0ee3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+                <form action="">
+                    <div class="input_field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="fas fa-envelope icon"></i>
+                    </div>
+                    <div class="input_field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="fas fa-lock icon"></i>
+                        <i class="fas fa-eye-slash i"></i>
+                    </div>
+                    <div class="checkbox_text">
+                        <div class="checkbox_content">
+                            <input type="checkbox" id="logcheck">
+                            <label for="checkbox" class="text">Remember you</label>
+                        </div>
+                        <a href="#" class="text">Forget Password</a>
+                    </div>
+                    <div class="input_field">
+                        <input type="submit" class="btn" value="Login Now">
+                    </div>
+                </form>
+                <div class="signup">
+                    <span class="text">Not a member? <a href="" class="text signtext">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+            <div class="form login">
+                <span class="title">Register Now</span>
+                <form action="">
+                    <div class="input_field">
+                        <input type="text" placeholder="Enter your name" required>
+                        <i class="fas fa-user "></i>
+                    </div>
+                    <div class="input_field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="fas fa-envelope icon"></i>
+                    </div>
+                    <div class="input_field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="fas fa-lock icon"></i>
+                        <i class="fas fa-eye-slash i"></i>
+                    </div>
+                    <div class="input_field">
+                        <input type="password" class="password" placeholder="Comfirm password" required>
+                        <i class="fas fa-lock icon"></i>
+                        <i class="fas fa-eye-slash i"></i>
+                    </div>
+                    <div class="checkbox_text">
+                        <div class="checkbox_content">
+                            <input type="checkbox" id="logcheck">
+                            <label for="checkbox" class="text">Remember you</label>
+                        </div>
+                        <a href="#" class="text">Forget Password</a>
+                    </div>
+                    <div class="input_field">
+                        <input type="submit" class="btn" value="Submit Now">
+                    </div>
+                </form>
+                <div class="signup">
+                    <span class="text">Not a member? <a href="" class="text loginlink">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const container = document.querySelector(".container"),
+            hideshow = document.querySelectorAll(".i"),
+            pass = document.querySelectorAll(".password"),
+            sing = document.querySelectorAll(".signlink"),
+            login = document.querySelectorAll(".loginlink");
+
+        hideshow.forEach(eyeicon => {
+            eyeicon.addEventListener("click", () => {
+                pass.forEach(pass => {
+                    if (pass.type === "password") {
+                        pass.type = "text";
+                        hideshow.forEach(icon => {
+                            icon.classList.replace("fa-eye-slash", "fa-eye");
+                        })
+                    }
+                    else {
+                        pass.type = "password";
+                        hideshow.forEach(icon => {
+                            icon.classList.replace("fa-eye", "fa-eye-slash");
+                        })
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
